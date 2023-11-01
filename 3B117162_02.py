@@ -1,20 +1,22 @@
 student = {}
 student = dict()
 
-sid = input("請輸入您的學號：")
-sname = input("請輸入您的姓名：")
-fchina = float(input("請輸入您的國文成績:"))
-fmath = float(input("請輸入您的數學成績："))
-finfo = float(input("請輸入您的電腦成績："))
-student = {'sid': sid, 'sname': sname, 'fchina': fchina,
-           'fmath': fmath, 'finfo': finfo}
+a = input("請輸入您的學號：")
+b = input("請輸入您的姓名：")
+c = float(input("請輸入您的國文成績:"))
+d = float(input("請輸入您的數學成績："))
+e = float(input("請輸入您的電腦成績："))
+student = {'sid': a, 'sname': b, 'fchina': c,
+           'fmath': d, 'finfo': e}
 
-sum = round(fchina + fmath + finfo, 2)
+sum = round(c + d + e, 2)
 ave = round(sum / 3, 2)
 
 print('-' * 30)
-print(f"{sname}({sid})同學您好 :\n以下是您的各科成績與分數評定")
-print(f"國文 : {fchina} / 數學 : {fmath} / 電腦 : {finfo}\n總分 : {sum} / 平均 : {ave}")
+print(f"{student['sname']}({student['sid']}) 同學您好 : \n以下是您的各科成績與分數評定")
+print("國文 : {} / 數學 : {} / 電腦 : {}"
+      .format(student['fchina'], student['fmath'], student['finfo']))
+print(f"總分 : {sum} / 平均 : {ave}")
 print('-' * 30)
 
 if ave > 60:
@@ -22,4 +24,3 @@ if ave > 60:
 
 else:
     print("成績判定 : 不合格")
- 

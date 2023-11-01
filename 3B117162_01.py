@@ -17,4 +17,3 @@ for row in range(1, s+1):
         b -= 1
 
     print()
- 
